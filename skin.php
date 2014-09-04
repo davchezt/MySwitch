@@ -35,11 +35,11 @@ public function handler_init($sender)
 	$sender->addCSSFile($this->resource("styles.css"), true);
 
 	// If we're viewing from a mobile browser, add the mobile CSS and change the master view.
-	if ($isMobile = isMobileBrowser()) {
+	/*if ($isMobile = isMobileBrowser()) {
 		$sender->addCSSFile($this->resource("mobile.css"), true);
 		$sender->masterView = "mobile.master";
 		$sender->addToHead("<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>");
-	}
+	}*/
 
 }
 
