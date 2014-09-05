@@ -262,6 +262,7 @@ p, pre, ul {
     font-weight: 300;
     background: #fff;
     border: 1px solid;
+	border-color: #ddd;
     padding: 5px;
     border-radius: 3px;
     vertical-align: -1px;
@@ -269,6 +270,9 @@ p, pre, ul {
     -webkit-appearance: none;
 }
 .input:focus, input[type=email]:focus, input[type=number]:focus, input[type=password]:focus, input[type=text]:focus, textarea:focus {
+    outline: 0;
+}
+.input:active, .button:active, input:active, input:focus {
     outline: 0;
 }
 .button {
@@ -332,12 +336,28 @@ a.button.big {
     border-color: rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) rgba(0, 0, 0, .25)!important;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',  endColorstr='#ffe6e6e6',  GradientType=0);
     filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .05);
+    /*-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .05);
     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .05);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .05);*/
     background-repeat: repeat-x;
     text-shadow: 0 1px 0 rgba(255, 255, 255, .6);
     padding: 4px 8px;
+}
+#gambits.popup {
+	width: 300px;
+	height: 280px;
+	overflow: auto !important;
+	margin: 0;
+	background: #F3F2F2;
+}
+.popupWrapper.active .popupButton {
+	border-bottom: none !important;
+}
+.popupWrapper.active .popupButton, .popup {
+	background: #F3F2F2 !important;
+}
+#memberProfile .button {
+	border-color: #267688 !important;
 }
 #conversationsFilter input, #memberListFilter input {
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
@@ -349,6 +369,7 @@ a.button.big {
     border-color: #267688;
 }
 #conversations {
+	background: rgba(221, 221, 221, .6);
     border-radius: 2px;
 	margin-top: 10px;
     border-left: 1px solid #ddd;
@@ -372,12 +393,56 @@ a.button.big {
     -moz-box-shadow: inset 0 1px 0 rgba(0, 0, 0, .1), 0 1px 2px rgba(0, 0, 0, .05);
     box-shadow: 0 0 0 1px rgba(0, 0, 0, .1), 0 0 0 3px rgba(0, 0, 0, .05);
 }
-.timeMarker, .thing, #conversationBody .avatar , #memberContent, #memberListBody {
+#conversationsFilter.bodyHeader, .timeMarker, .thing, #conversationBody .avatar , #memberContent, #memberListBody, .sheet, .sheet.active {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',  endColorstr='#ffe6e6e6',  GradientType=0);
     filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
     -webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, .1), 0 1px 2px rgba(0, 0, 0, .05);
     -moz-box-shadow: inset 0 1px 0 rgba(0, 0, 0, .1), 0 1px 2px rgba(0, 0, 0, .05);
     box-shadow: 0 0 0 1px rgba(0, 0, 0, .1), 0 0 0 3px rgba(0, 0, 0, .05);
+}
+#addMemberForm .button, .post .editButtons .draftButtons .button, .sheet .buttons .button:not(.submit) {
+	border: 1px solid #ddd;
+}
+#addMemberForm .button:hover, .post .editButtons .draftButtons .button:hover, .sheet .buttons .button:not(.submit):hover {
+	border-color: #267688;
+}
+#addMemberForm .button {
+	margin-left: 5px;
+	vertical-align: -1px;
+}
+.button.submit:hover, .button.submit:active {
+	border-color: rgba(0, 0, 0, 0.22);
+	color: #fff;
+}
+.button.new:active, .button.new:hover {
+	background-color: #62CAE0 !important;
+	border-color: rgba(0, 0, 0, 0.22);
+}
+#memberListBody {
+	background: rgba(221, 221, 221, .6);
+}
+.sheetOverlay {
+	background: rgba(234, 234, 240, 0.9);
+}
+#conversationHeader .channels {
+	margin-left: 15px;
+	display: inline-block;
+	margin-bottom: -7px;
+}
+#conversationHeader .labels {
+	position: relative;
+	top: -5px;
+}
+#control-changeMembersAllowed {
+	float: right;
+	font-size: 85%;
+	margin-top: -3px;
+	border: 1px solid #ddd;
+	padding: 4px 6px;
+	border-radius: 3px;
+}
+#control-changeMembersAllowed:hover {
+	border-color: #267688;
 }
 #conversationBody .avatar {
 	border: 1px solid #ddd;
