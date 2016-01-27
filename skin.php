@@ -28,7 +28,7 @@ class ETSkin_MySwitch extends ETSkin {
 public function handler_init($sender)
 {
 	// source link
-	$sender->addToMenu('statistics', 'myswitch', '<a href="https://github.com/davchezt/MySwitch">MySwitch</a> Skin by DaVchezt');
+	$sender->addToMenu('statistics', 'myswitch', '<a href="https://github.com/davchezt/MySwitch">MySwitch Skin</a> desinged by DaVchezt');
 	$sender->addCSSFile((C("esoTalk.https") ? "https" : "http")."://fonts.googleapis.com/css?family=Open+Sans:400,600");
 	$sender->addCSSFile("core/skin/base.css", true);
 	$sender->addCSSFile("core/skin/font-awesome.css", true);
