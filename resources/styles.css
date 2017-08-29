@@ -14,7 +14,7 @@ body {
     color: #666;
 }
 body, input, select, textarea {
-    font-family: open sans, lucida grande, lucida sans unicode, helvetica, arial, sans-serif;
+    font-family: /*open sans, lucida grande, lucida sans unicode, */helvetica, arial, sans-serif;
 }
 input, select, textarea {
     font-size: 100%}
@@ -47,6 +47,7 @@ p, pre, ul {
     background: #fff;
 }
 .conversationList .title {
+    font-family: BebasNeueRegular, helvetica, arial, sans-serif;
     font-weight: 300;
     font-size: 16px;
 }
@@ -58,6 +59,12 @@ p, pre, ul {
 }
 .channelList .channel {
     font-weight: 600;
+}
+.channelList .button {
+    border: 1px solid #ddd;
+}
+.channelList .button:hover {
+    border: 1px solid #267688;
 }
 .tabs.big li.selected a {
     color: #fff;
@@ -72,6 +79,7 @@ p, pre, ul {
 }
 .avatar {
     border-radius: 32px;
+    border: solid 2px;
 }
 .scrubber li.selected > a {
     font-weight: 600;
@@ -182,7 +190,7 @@ p, pre, ul {
     margin-left: -30px;
     font-size: 20px;
     line-height: 20px;
-    margin-top: 17px;
+    margin-top: 14px;
     text-decoration: none;
 }
 #mainMenu {
@@ -240,13 +248,16 @@ p, pre, ul {
 .list .col-replies > span {
     background: #ddd;
     padding: 2px 10px;
-    border-radius: 50%}
+    border-radius: 2px;
+    border: 1px solid #ccc;
+}
 .list .col-replies > span:hover {
     background-color: #e5eeef;
     border: 1px solid;
 }
 #ftr {
-    font-size: 90%}
+    font-size: 90%
+}
 #ftr-content {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -386,7 +397,8 @@ a.button.big {
 #conversationPrivacy {
 	margin: 10px 0 40px;
 	clear: both;
-	padding: 10px;
+    padding: 10px;
+    min-height: 24px;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',  endColorstr='#ffe6e6e6',  GradientType=0);
     filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
     -webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, .1), 0 1px 2px rgba(0, 0, 0, .05);
@@ -409,6 +421,12 @@ a.button.big {
 #addMemberForm .button {
 	margin-left: 5px;
 	vertical-align: -1px;
+}
+.form > li.sep:last-child {
+    border: none;
+}
+#memberContent {
+    padding: 14px !important;
 }
 .button.submit:hover, .button.submit:active {
 	border-color: rgba(0, 0, 0, 0.22);
@@ -436,7 +454,7 @@ a.button.big {
 #control-changeMembersAllowed {
 	float: right;
 	font-size: 85%;
-	margin-top: -3px;
+	margin-top: -1px;
 	border: 1px solid #ddd;
 	padding: 4px 6px;
 	border-radius: 3px;
@@ -446,7 +464,7 @@ a.button.big {
 }
 #conversationBody .avatar {
 	border: 1px solid #ddd;
-	border-radius: 2px;
+	border-radius: 50%;
 }
 #conversationBody .avatar:hover {
 	-webkit-filter: saturate(50%);
@@ -505,15 +523,22 @@ a.button.big {
 #conversationTitle a, #hdr, #hdr-inner > a, #hdr-inner > h1 a, #hdr-inner > ul > li > a, #languageList > li, #pluginList > li, #skinList > li, .action .name, .action a, .action strong, .button, .button i, .button:hover, .channelList .channel, .conversationList .title a, .conversationList .unread .title a, .memberList strong a, .postHeader h3, .postHeader h3 a, .scrubber li ul li.selected a, .scrubber li.selected > a, .tabs li.selected a, a {
     color: #267688;
 }
-
+.scrubber {
+    margin: 10px 0;
+}
 .scrubber > li {
-	border-left: 5px solid #B2B0B0;
+    border-left: 5px solid #B2B0B0;
+    margin-bottom: 1px;
 }
 .scrubber > li:hover {
 	border-color: #267688;
 }
 .scrubber > li  i {
 	color: #B2B0B0;
+}
+.letterScrubber > li > a {
+    padding: 0 8px;
+    line-height: 16px;
 }
 .scrubber > li:hover  a, .scrubber > li:hover  i {
 	color: #267688;
@@ -568,4 +593,16 @@ a.chanel:hover {
 }
 .list li:last-child {
 	border-radius: 0 0 2px 2px;
+}
+#channelList {
+    margin-top: -5px;
+    border-radius: 2px;
+    margin-top: 10px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    -webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, .1), 0 1px 2px rgba(0, 0, 0, .05);
+    -moz-box-shadow: inset 0 1px 0 rgba(0, 0, 0, .1), 0 1px 2px rgba(0, 0, 0, .05);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .1), 0 0 0 3px rgba(0, 0, 0, .05);
 }
